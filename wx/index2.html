@@ -53,8 +53,8 @@ function locate() {
 
   infodiv.innerHTML = infodiv.innerHTML
                         .replace('TEST', "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude + "<br>")
-                        .replace('LAT', position.coords.latitude)
-                        .replace('LNG', position.coords.longitude)
+//                        .replace('LAT', position.coords.latitude)
+//                        .replace('LNG', position.coords.longitude)
                         .replace('INFO', jsdata);
                         //.replace('INFO', "\<script\>ZZZ\<\/script\>");
 
@@ -68,8 +68,7 @@ function locate() {
     TEST<br>
     LAT<br>
     LNG<br>
-   <hr>
-   INFO
+    INFO
 <!--
     <script type="text/javascript" src="https://darksky.net/widget/default/LAT,LNG/us12/en.js?title=Glen Carbon&amp;textColor=333333&amp;bgColor=transparent&amp;transparency=true&amp;fontFamily=Default&amp;units=us&amp;htColor=333333&amp;ltColor=333333&amp;displaySum=yes&amp;displayHeader=no"></script>
     <script type="text/javascript" src="https://darksky.net/widget/default/38.758,-89.988/us12/en.js?title=Glen Carbon&amp;textColor=333333&amp;bgColor=transparent&amp;transparency=true&amp;fontFamily=Default&amp;units=us&amp;htColor=333333&amp;ltColor=333333&amp;displaySum=yes&amp;displayHeader=no"></script>
