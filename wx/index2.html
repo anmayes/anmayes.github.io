@@ -47,18 +47,17 @@ function locate() {
 
 
   function showPosition(position) {
-//  sleep(5000);
 
-  var jsdata = '\<script type="text/javascript" src="https://darksky.net/widget/default/' + position.coords.latitude + ',' + position.coords.longitude +'/us12/en.js?title=Glen Carbon&amp;textColor=333333&amp;bgColor=transparent&amp;transparency=true&amp;fontFamily=Default&amp;units=us&amp;htColor=333333&amp;ltColor=333333&amp;displaySum=yes&amp;displayHeader=no"\>\<\/script\>';
+    var jsdata = '\<script type="text/javascript" src="https://darksky.net/widget/default/' + position.coords.latitude + ',' + position.coords.longitude +'/us12/en.js?title=Glen Carbon&amp;textColor=333333&amp;bgColor=transparent&amp;transparency=true&amp;fontFamily=Default&amp;units=us&amp;htColor=333333&amp;ltColor=333333&amp;displaySum=yes&amp;displayHeader=no"\>\<\/script\>';
 
-  infodiv.innerHTML = infodiv.innerHTML
+    infodiv.innerHTML = infodiv.innerHTML
                         .replace('TEST', "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude + "<br>")
 //                        .replace('LAT', position.coords.latitude)
 //                        .replace('LNG', position.coords.longitude)
                         .replace('INFO', jsdata);
                         //.replace('INFO', "\<script\>ZZZ\<\/script\>");
 
-//  mapdiv.innerHTML = '<iframe id="ds_49b22a3bfd6919e9c8287745669f60df" type="text/html" frameborder="0" height="100%" width="100%" src="https://maps.darksky.net/@radar,' + position.coords.latitude + ',' + position.coords.longitude + ',7?marker=' + position.coords.latitude + ',' + position.coords.longitude + '&marker-name=Glen%20Carbon"></iframe>';
+    mapdiv.innerHTML = '<iframe id="ds_49b22a3bfd6919e9c8287745669f60df" type="text/html" frameborder="0" height="100%" width="100%" src="https://maps.darksky.net/@radar,' + position.coords.latitude + ',' + position.coords.longitude + ',7?marker=' + position.coords.latitude + ',' + position.coords.longitude + '&marker-name=Glen%20Carbon"></iframe>';
   }
 }
 </script>
@@ -66,8 +65,6 @@ function locate() {
 <div class="container">
   <div class="info" id="info"> 
     TEST<br>
-    LAT<br>
-    LNG<br>
     INFO
 <!--
     <script type="text/javascript" src="https://darksky.net/widget/default/LAT,LNG/us12/en.js?title=Glen Carbon&amp;textColor=333333&amp;bgColor=transparent&amp;transparency=true&amp;fontFamily=Default&amp;units=us&amp;htColor=333333&amp;ltColor=333333&amp;displaySum=yes&amp;displayHeader=no"></script>
