@@ -48,9 +48,10 @@ function locate() {
 
   function showPosition(position) {
   infodiv.innerHTML = infodiv.innerHTML
-                        .replace('TEST', "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude)
+                        .replace('TEST', "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude + "<br>")
                         .replace('LAT', position.coords.latitude)
-                        .replace('LNG', position.coords.longitude);
+                        .replace('LNG', position.coords.longitude)
+                        .replace('INFO', "\<script\>ZZZ\<\/script\>");
 
   mapdiv.innerHTML = '<iframe id="ds_49b22a3bfd6919e9c8287745669f60df" type="text/html" frameborder="0" height="100%" width="100%" src="https://maps.darksky.net/@radar,' + position.coords.latitude + ',' + position.coords.longitude + ',7?marker=' + position.coords.latitude + ',' + position.coords.longitude + '&marker-name=Glen%20Carbon"></iframe>';
   }
@@ -63,6 +64,7 @@ function locate() {
     LAT<br>
     LNG<br>
    <hr>
+   INFO
 <!--
     <script type="text/javascript" src="https://darksky.net/widget/default/LAT,LNG/us12/en.js?title=Glen Carbon&amp;textColor=333333&amp;bgColor=transparent&amp;transparency=true&amp;fontFamily=Default&amp;units=us&amp;htColor=333333&amp;ltColor=333333&amp;displaySum=yes&amp;displayHeader=no"></script>
     <script type="text/javascript" src="https://darksky.net/widget/default/38.758,-89.988/us12/en.js?title=Glen Carbon&amp;textColor=333333&amp;bgColor=transparent&amp;transparency=true&amp;fontFamily=Default&amp;units=us&amp;htColor=333333&amp;ltColor=333333&amp;displaySum=yes&amp;displayHeader=no"></script>
