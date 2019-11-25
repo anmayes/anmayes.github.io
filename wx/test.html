@@ -28,7 +28,7 @@
           width: 75%;
       }
     </style>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!--    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
     <script>
       function locate() {
         var infodiv = document.getElementById("info");
@@ -48,23 +48,23 @@
           var geoLng = pos.coords.longitude.toFixed(5);
           var geoAcc = pos.coords.accuracy.toFixed(1);
 
-
-
+/*
 
 //$.getJSON('http://time.jsontest.com', function(data) {
 //$.getJSON('https://api.darksky.net/forecast/81ca3cd38ebb0913558a2202e7d52f24/' + geoLat + ',' + geoLng + '?exclude=minutely,hourly,daily,alerts,flags&units=auto', function(data) {
 
+var url = 'https://api.darksky.net/forecast/81ca3cd38ebb0913558a2202e7d52f24/' + geoLat + ',' + geoLng + '?exclude=minutely,hourly,daily,alerts,flags&units=auto';
+
 $.ajax({
-  dataType: "json", 'https://api.darksky.net/forecast/81ca3cd38ebb0913558a2202e7d52f24/' + geoLat + ',' + geoLng + '?exclude=minutely,hourly,daily,alerts,flags&units=auto', function(data) {
+  dataType: "json", url, function(data) {
         
   var text = `timezone: ${data.timezone}<br>`
-//  $(".infodiv").html(text);
-  infodiv.innerHTML = text + "<br>";
+  $(".infodiv").html(text);
+//  infodiv.innerHTML = text + "<br>";
 }});
 //});
 
 
-/*
 
   var request = new XMLHttpRequest();
   request.open('GET', 'https://api.darksky.net/forecast/81ca3cd38ebb0913558a2202e7d52f24/' + geoLat + ',' + geoLng + '?exclude=minutely,hourly,daily,alerts,flags&units=auto', true);
@@ -82,16 +82,10 @@ request.onload = function() {
   alert('HERE');
 }
 
-
-
 */
 
 
-
-
-
-
-//  infodiv.innerHTML = "geoLat: " + geoLat + "<br>geoLng: " + geoLng + "<br>geoAcc: " + geoAcc + "<br><br>";
+  infodiv.innerHTML = "geoLat: " + geoLat + "<br>geoLng: " + geoLng + "<br>geoAcc: " + geoAcc + "<br><br>";
 
 
 //  mapdiv.innerHTML = '<iframe id="ds_49b22a3bfd6919e9c8287745669f60df" type="text/html" frameborder="0" height="100%" width="100%" src="https://maps.darksky.net/@radar,' + geoLat + ',' + geoLng + ',7?marker=' +  geoLat + ',' +  geoLng + '"></iframe>';
